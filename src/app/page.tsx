@@ -382,14 +382,14 @@ export default function Home() {
         >
           <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
             <TextType 
-              text={["DEVELOPER", "ENTREPRENEUR", "VISIONARY", "FUTURE BILLIONAIRE", "MY NAME IS DHANUSH SHENOY H"]}
+              text={["Developer", "Entrepreneur", "Visionary", "Future Billionaire", "My name Is DHANUSH SHENOY H"]}
               typingSpeed={45}
               pauseDuration={1500}
               showCursor={true}
               cursorCharacter="▮"
             />
           </div>
-          <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
+          <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4 text-center">
             UI/UX Designer | Full Stack Developer | Tech Enthusiast | Automation | Agentic AI Fan
           </div>
           <div className="d-flex">
@@ -403,7 +403,7 @@ export default function Home() {
         <a href="https://linkedin.com/in/dhanush-shenoy-h" target="_blank" rel="noopener noreferrer">
           <button
             type="button"
-            className="my-10 flex w-99 cursor-pointer flex-col items-stretch rounded-xl border-0 bg-[#1F2121] p-2 md:my-20 md:p-4"
+            className="my-10 flex w-90 cursor-pointer flex-col items-stretch rounded-xl border-0 bg-[#1F2121] p-2 md:my-20 md:p-4"
             aria-label="View invite F7RA"
             style={{
               transformStyle: "preserve-3d",
@@ -432,7 +432,7 @@ export default function Home() {
         </a>
       </CometCard>
     </main>
-    <div className="relative w-full overflow-clip">
+    <div className="relative w-full overflow-clip border-20 border-black/90">
       <Timeline data={data} />
     </div>
     <div className="relative overflow-hidden bg-black/90 pt-100 flex flex-col items-center" id="skills">
@@ -448,10 +448,10 @@ export default function Home() {
         triggerOnce={true}
         triggerOnHover={true}
         respectReducedMotion={true}
-        className={`mb-10 text-3xl md:text-5xl font-bold text-white ${ps2.className}`}
+        className={`mb-10 text-xl md:text-5xl sm:text-5xl font-bold text-white ${ps2.className}`}
       />
       <IconCloud icons={icons} />
-      <div className="flex gap-30 mt-20 mb-20">
+      <div className="flex flex-wrap gap-30 mt-20 mb-20 justify-center">
         <ElectricBorder
           color="#7df9ff"
           speed={1}
@@ -459,30 +459,32 @@ export default function Home() {
           thickness={2}
           style={{ borderRadius: 16 }}
         >
-        <PixelCard variant="blue" gap={7} speed={100}>
-          <div className="absolute inset-0 grid place-items-center z-10">
-            <Shuffle
-              text="Frontend Technologies"
-              shuffleDirection="right"
-              duration={0.35}
-              animationMode="evenodd"
-              shuffleTimes={1}
-              ease="power3.out"
-              stagger={0.03}
-              threshold={0.1}
-              triggerOnce={true}
-              triggerOnHover={true}
-              respectReducedMotion={true}
-              className={`mb-10 text-base md:text-xl font-bold text-white ${ps2.className}`}
-            />
-            <div className="mt-4 flex flex-wrap justify-center">
-              <FaReact key="react" size={54} color="cyan" />,
-              <IoLogoJavascript key="javascript" size={54} color="yellow" />,
-              <DiCss3 key="css3" size={54} color="blue" />,
-              <FaHtml5 key="html5" size={54} color="orange" />
-            </div>
+          <div className="flex flex-1 md:w-full sm:w-full">
+            <PixelCard variant="blue" gap={7} speed={100}>
+              <div className="absolute inset-0 grid place-items-center z-10">
+                <Shuffle
+                  text="Frontend Technologies"
+                  shuffleDirection="right"
+                  duration={0.35}
+                  animationMode="evenodd"
+                  shuffleTimes={1}
+                  ease="power3.out"
+                  stagger={0.03}
+                  threshold={0.1}
+                  triggerOnce={true}
+                  triggerOnHover={true}
+                  respectReducedMotion={true}
+                  className={`mb-10 text-base md:text-3xl sm:text-3xl font-bold text-white ${ps2.className}`}
+                />
+                <div className="mt-4 flex flex-wrap justify-center">
+                  <FaReact key="react" size={54} color="cyan" />,
+                  <IoLogoJavascript key="javascript" size={54} color="yellow" />,
+                  <DiCss3 key="css3" size={54} color="blue" />,
+                  <FaHtml5 key="html5" size={54} color="orange" />
+                </div>
+              </div>
+            </PixelCard>
           </div>
-        </PixelCard>
         </ElectricBorder>
         <ElectricBorder
           color="pink"
@@ -491,68 +493,72 @@ export default function Home() {
           thickness={2}
           style={{ borderRadius: 16 }}
         >
-        <PixelCard variant="pink" gap={7}>
-        <div className="absolute inset-0 grid place-items-center z-10">
-          <Shuffle
-            text="Backend Technologies"
-            shuffleDirection="right"
-            duration={0.35}
-            animationMode="evenodd"
-            shuffleTimes={1}
-            ease="power3.out"
-            stagger={0.03}
-            threshold={0.1}
-            triggerOnce={true}
-            triggerOnHover={true}
-            respectReducedMotion={true}
-            className={`mb-10 text-base md:text-xl font-bold text-white ${ps2.className}`}
-          />
-          <div className="mt-4 flex flex-wrap justify-center">
-            <FaPython key="python" size={54} color="lightblue" />,
-            <RiNextjsLine key="nextjs" size={54} color="white" />,
-            <SiDjango key="django" size={54} color="green" />,
-            <FaHtml5 key="html5" size={54} color="orange" />
+          <div className="flex flex-1 md:w-full sm:w-full">
+            <PixelCard variant="pink" gap={7}>
+              <div className="absolute inset-0 grid place-items-center z-10">
+                <Shuffle
+                  text="Backend Technologies"
+                  shuffleDirection="right"
+                  duration={0.35}
+                  animationMode="evenodd"
+                  shuffleTimes={1}
+                  ease="power3.out"
+                  stagger={0.03}
+                  threshold={0.1}
+                  triggerOnce={true}
+                  triggerOnHover={true}
+                  respectReducedMotion={true}
+                  className={`mb-10 text-base md:text-3xl sm:text-3xl font-bold text-white ${ps2.className}`}
+                />
+                <div className="mt-4 flex flex-wrap justify-center">
+                  <FaPython key="python" size={54} color="lightblue" />,
+                  <RiNextjsLine key="nextjs" size={54} color="white" />,
+                  <SiDjango key="django" size={54} color="green" />,
+                  <FaHtml5 key="html5" size={54} color="orange" />
+                </div>
+              </div>
+            </PixelCard>
           </div>
-        </div>
-      </PixelCard>
-      </ElectricBorder>
-      <ElectricBorder
-        color="yellow"
-        speed={1}
-        chaos={0.5}
-        thickness={2}
-        style={{ borderRadius: 16 }}
-      >
-      <PixelCard variant="yellow" gap={7} speed={100}>
-        <div className="absolute inset-0 grid place-items-center z-10">
-          <Shuffle
-            text="Tools & Platforms"
-            shuffleDirection="right"
-            duration={0.35}
-            animationMode="evenodd"
-            shuffleTimes={1}
-            ease="power3.out"
-            stagger={0.03}
-            threshold={0.1}
-            triggerOnce={true}
-            triggerOnHover={true}
-            respectReducedMotion={true}
-            className={`mb-10 text-base md:text-xl font-bold text-white ${ps2.className}`}
-          />
-          <div className="mt-4 flex flex-wrap justify-center">
-            <FaGitAlt key="git" size={54} color="#d46521ff" />,
-            <SiNetlify key="netlify" size={54} color="#00C7B7" />,
-            <SiN8N key="n8n" size={54} color="red" />,
-            <FaGithub key="github" size={54} color="#fff" />
-            <RiPerplexityFill key="perplexity" size={54} color="white" />,
-            <SiNotion key="notion" size={54} color="white" />,
+        </ElectricBorder>
+        <ElectricBorder
+          color="yellow"
+          speed={1}
+          chaos={0.5}
+          thickness={2}
+          style={{ borderRadius: 16 }}
+        >
+          <div className="flex flex-1 md:w-full sm:w-full">
+            <PixelCard variant="yellow" gap={7} speed={100}>
+              <div className="absolute inset-0 grid place-items-center z-10">
+                <Shuffle
+                  text="Tools & Platforms"
+                  shuffleDirection="right"
+                  duration={0.35}
+                  animationMode="evenodd"
+                  shuffleTimes={1}
+                  ease="power3.out"
+                  stagger={0.03}
+                  threshold={0.1}
+                  triggerOnce={true}
+                  triggerOnHover={true}
+                  respectReducedMotion={true}
+                  className={`mb-10 text-base md:text-3xl sm:text-3xl font-bold text-white ${ps2.className}`}
+                />
+                <div className="mt-4 flex flex-wrap justify-center pr-5 pl-5">
+                  <FaGitAlt key="git" size={54} color="#d46521ff" />,
+                  <SiNetlify key="netlify" size={54} color="#00C7B7" />,
+                  <SiN8N key="n8n" size={54} color="red" />,
+                  <FaGithub key="github" size={54} color="#fff" />
+                  <RiPerplexityFill key="perplexity" size={54} color="white" />,
+                  <SiNotion key="notion" size={54} color="white" />,
+                </div>
+              </div>
+            </PixelCard>
           </div>
-        </div>
-      </PixelCard>
-      </ElectricBorder>
+        </ElectricBorder>
       </div>
       <div className="pt-20" id="achievements">
-        <h1 className="text-4xl md:text-xl lg:text-2xl font-semibold max-w-2xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white mb-20">
+        <h1 className="text-4xl md:text-xl lg:text-2xl sm:text-3xl font-semibold max-w-2xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white mb-20">
           <TextPressure
             text="Some of my"
             flex={true}
@@ -572,7 +578,7 @@ export default function Home() {
           <HeroParallax products={products} />;
         </div>
       </div>
-      <div className="text-7xl text-white" id="projects">
+      <div className="text-7xl text-white sm:m-10" id="projects">
         <ElectricBorder
           color="gold"
           speed={1}
@@ -596,12 +602,12 @@ export default function Home() {
             />
         </ElectricBorder>
       </div>
-      <div className="h-[40rem] w-full flex items-center justify-center">
+      <div className="w-full flex flex-wrap items-center justify-center gap-20 mt-20">
         <PinContainer
           title="Chef Claude"
           href="https://github.com/abbysallord/AI-Chef"
         >
-          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+          <div className="flex basis-full flex-col p-1 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
             <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
               Chef Claude
             </h3>
@@ -617,7 +623,7 @@ export default function Home() {
           title="AgroNova"
           href="https://agro-nova-copy-0d5652ec.base44.app/login?from_url=https://agro-nova-copy-0d5652ec.base44.app/&app_id=68d0ba97c7974b4a0d5652ec"
         >
-          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+          <div className="flex basis-full flex-col p-1 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
             <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
               AgroNova
             </h3>
@@ -633,7 +639,7 @@ export default function Home() {
           title="UI Example"
           href="https://ui-example-1.netlify.app/"
         >
-          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+          <div className="flex basis-full flex-col p-1 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
             <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
               UI Example
             </h3>
@@ -645,13 +651,11 @@ export default function Home() {
             <div className="flex flex-1 w-full rounded-lg mt-4 bg-cover bg-center" style={{backgroundImage: `url(${UiExample.src})`}}/>
           </div>
         </PinContainer>
-      </div>
-      <div className="h-[20rem] w-full flex items-center justify-center ">
         <PinContainer
           title="Playsor"
           href="https://playsor.netlify.app"
         >
-          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+          <div className="flex basis-full flex-col p-1 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
             <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
               Playsor
             </h3>
@@ -667,7 +671,7 @@ export default function Home() {
           title="Quick Assistant"
           href="https://github.com/abbysallord/quick-assistant"
         >
-          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+          <div className="flex basis-full flex-col p-1 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
             <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
               Quick Assistant - Vodka
             </h3>
@@ -683,7 +687,7 @@ export default function Home() {
           title="Ultimate Assisteant"
           href="https://n8n.io"
         >
-          <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+          <div className="flex basis-full flex-col p-1 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
             <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
               Ultimate Assistant
             </h3>
