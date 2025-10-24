@@ -159,3 +159,15 @@
 html {
   scroll-behavior: smooth;
 }
+
+@media (max-width: 640px) {
+  .skills{
+    font-size: 1.5rem;
+  }
+  .skills-head{
+    font-size: 2rem;
+  }
+  .achivements-head{
+    font-size: 1rem;
+  }
+}

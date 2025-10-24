@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-import { IconHome, IconUser, IconMessage } from "@tabler/icons-react";
+import { IconHome, IconUser, IconMessage, IconHandStop, IconTrophy, IconDeviceComputerCamera } from "@tabler/icons-react";
 import { color, motion } from "motion/react";
 import React from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
@@ -193,21 +193,21 @@ const navItems = [
       name: "Skills",
       link: "#skills",
       icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <IconHandStop className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
     {
       name: "Achievents",
       link: "#achievements",
       icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <IconTrophy className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
     {
       name: "Projects",
       link: "#projects",
       icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <IconDeviceComputerCamera className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
     {
@@ -436,6 +436,7 @@ export default function Home() {
       <Timeline data={data} />
     </div>
     <div className="relative overflow-hidden bg-black/90 pt-100 flex flex-col items-center" id="skills">
+    <div className="flex flex-wrap">
       <Shuffle
         text="Skills & Technologies"
         shuffleDirection="right"
@@ -448,10 +449,11 @@ export default function Home() {
         triggerOnce={true}
         triggerOnHover={true}
         respectReducedMotion={true}
-        className={`mb-10 text-xl md:text-5xl sm:text-5xl font-bold text-white ${ps2.className}`}
+        className={`skills-head mb-10 text-sm sm:text-3xl md:text-4xl xl:text-6xl font-bold text-white break-words px-4 w-full ${ps2.className}`}
       />
+    </div>
       <IconCloud icons={icons} />
-      <div className="flex flex-wrap gap-30 mt-20 mb-20 justify-center">
+      <div className="flex flex-wrap gap-10 mt-20 mb-20 justify-center">
         <ElectricBorder
           color="#7df9ff"
           speed={1}
@@ -459,7 +461,7 @@ export default function Home() {
           thickness={2}
           style={{ borderRadius: 16 }}
         >
-          <div className="flex flex-1 md:w-full sm:w-full">
+          <div className="flex flex-1 md:w-full sm:w-full xs:w-full">
             <PixelCard variant="blue" gap={7} speed={100}>
               <div className="absolute inset-0 grid place-items-center z-10">
                 <Shuffle
@@ -474,7 +476,7 @@ export default function Home() {
                   triggerOnce={true}
                   triggerOnHover={true}
                   respectReducedMotion={true}
-                  className={`mb-10 text-base md:text-3xl sm:text-3xl font-bold text-white ${ps2.className}`}
+                  className={`skills mb-10 md:text-3xl sm:text-3xl font-bold text-white ${ps2.className}`}
                 />
                 <div className="mt-4 flex flex-wrap justify-center">
                   <FaReact key="react" size={54} color="cyan" />,
@@ -508,7 +510,7 @@ export default function Home() {
                   triggerOnce={true}
                   triggerOnHover={true}
                   respectReducedMotion={true}
-                  className={`mb-10 text-base md:text-3xl sm:text-3xl font-bold text-white ${ps2.className}`}
+                  className={`skills mb-10 text-base md:text-3xl sm:text-3xl font-bold text-white ${ps2.className}`}
                 />
                 <div className="mt-4 flex flex-wrap justify-center">
                   <FaPython key="python" size={54} color="lightblue" />,
@@ -542,7 +544,7 @@ export default function Home() {
                   triggerOnce={true}
                   triggerOnHover={true}
                   respectReducedMotion={true}
-                  className={`mb-10 text-base md:text-3xl sm:text-3xl font-bold text-white ${ps2.className}`}
+                  className={`skills mb-10 text-base md:text-3xl sm:text-3xl font-bold text-white ${ps2.className}`}
                 />
                 <div className="mt-4 flex flex-wrap justify-center pr-5 pl-5">
                   <FaGitAlt key="git" size={54} color="#d46521ff" />,
@@ -570,7 +572,7 @@ export default function Home() {
             textColor="#ffffff"
             strokeColor="#ff0000"
             minFontSize={36}
-            className="pb-6"
+            className="pb-6 achivements-head"
           />
           <Cover className="text-white/80"><span className="text-7xl">Certifications</span></Cover>
         </h1>
