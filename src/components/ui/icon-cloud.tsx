@@ -37,6 +37,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
     startTime: number
     duration: number
   } | null>(null)
+  const [canvasSize, setCanvasSize] = useState(480)
   const animationFrameRef = useRef<number>(0)
   const rotationRef = useRef(rotation)
   const iconCanvasesRef = useRef<HTMLCanvasElement[]>([])
@@ -93,6 +94,45 @@ export function IconCloud({ icons, images }: IconCloudProps) {
 
     iconCanvasesRef.current = newIconCanvases
   }, [icons, images])
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const parent = canvas.parentElement
+
+    const updateSize = () => {
+      const parentWidth = parent?.clientWidth ?? window.innerWidth
+      const nextSize = Math.min(640, Math.max(260, Math.round(parentWidth)))
+      setCanvasSize(nextSize)
+    }
+
+    updateSize()
+
+    const resizeObserver =
+      parent && typeof ResizeObserver !== "undefined"
+        ? new ResizeObserver(() => updateSize())
+        : null
+
+    if (parent && resizeObserver) {
+      resizeObserver.observe(parent)
+    }
+
+    window.addEventListener("resize", updateSize)
+
+    return () => {
+      window.removeEventListener("resize", updateSize)
+      resizeObserver?.disconnect()
+    }
+  }, [])
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (canvas) {
+      canvas.width = canvasSize
+      canvas.height = canvasSize
+    }
+  }, [canvasSize])
 
   // Generate initial icon positions on a sphere
   useEffect(() => {
@@ -307,13 +347,14 @@ export function IconCloud({ icons, images }: IconCloudProps) {
   return (
     <canvas
       ref={canvasRef}
-      width={1000}
-      height={1000}
+      width={canvasSize}
+      height={canvasSize}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
-      className="rounded-lg"
+      className="mx-auto block h-auto w-full max-w-[640px] rounded-lg"
+      style={{ aspectRatio: "1 / 1" }}
       aria-label="Interactive 3D Icon Cloud"
       role="img"
     />
