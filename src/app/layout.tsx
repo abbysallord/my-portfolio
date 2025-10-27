@@ -15,10 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Dhanush Shenoy H",
   description: "The porfolio of a visionary developer, entrepreneur and a future billionaire.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
 };
 
 export default function RootLayout({
